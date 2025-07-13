@@ -17,7 +17,8 @@ RUN mkdir -p /home/appuser/playwright2
 RUN mkdir -p /home/appuser/playwright
 RUN  chmod -R 777 /home/appuser
 
-RUN chown  appuser:appgroup /ms-playwright
+RUN chown  appuser:appgroup /home/appuser
+#/ms-playwright
 #/home/appuser
 
 # Optional: Switch to appuser
