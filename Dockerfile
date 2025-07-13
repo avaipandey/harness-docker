@@ -19,9 +19,7 @@ RUN chown  appuser:appgroup /home/appuser
 
 # Optional: Switch to appuser
 #USER appuser
-# Install only Chromium (not all browsers)
-RUN npm install -g @playwright/test && \
-    playwright install chromium --with-deps
+
 
 # Dummy command
 CMD ["echo", "App setup complete"]
