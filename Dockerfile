@@ -1,5 +1,8 @@
 FROM mcr.microsoft.com/playwright:v1.52.0-jammy
 
+# Reduce image size by removing unnecessary browsers
+RUN rm -rf /root/.ms-playwright/firefox /root/.ms-playwright/webkit
+
 # Prevent automatic browser downloads during npm install
 ENV NPM_CONFIG_LOGLEVEL=verbose
 ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
