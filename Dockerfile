@@ -11,8 +11,10 @@ ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 RUN groupadd -r appgroup && useradd -r -g appgroup appuser
 
 # Create app directory and assign ownership
+RUN mkdir -p /home/appuser/playwright1
 RUN mkdir -p /home/appuser/playwright
 RUN  chmod -R 777 /home/appuser
+
 RUN chown  appuser:appgroup /home/appuser
 
 # Optional: Switch to appuser
