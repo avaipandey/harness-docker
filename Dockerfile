@@ -18,7 +18,7 @@ RUN  chmod -R 777 /home/appuser
 RUN chown  appuser:appgroup /home/appuser
 
 # Optional: Switch to appuser
-USER appuser
+#USER appuser
 # Install only Chromium (not all browsers)
 RUN npm install -g @playwright/test && \
     playwright install chromium --with-deps
